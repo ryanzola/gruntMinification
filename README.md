@@ -1,4 +1,4 @@
-# gruntMinification
+# Grunt Minification
 
 ### Install the Grunt CLI
 ```
