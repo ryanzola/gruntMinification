@@ -9,7 +9,10 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-					'./build/scripts/output.min.js': ['./scripts/server.js', './scripts/index.js']
+					'./build/scripts/output.min.js': [				// Dictionary of files
+						'./scripts/server.js', 									// destination: [source, ...]
+						'./scripts/index.js'
+					]
 				}
       }
 		},
@@ -21,7 +24,7 @@ module.exports = function(grunt) {
 					maxLineLength: 200
 				},
 				files: {                                   // Dictionary of files
-					'build/index.html': './index.html',      // 'destination': 'source'
+					'build/index.html': './index.html',      // destination: source
 					
 				}
 			}
@@ -32,18 +35,21 @@ module.exports = function(grunt) {
 				roundingPrecision: -1
 			},
 			target: {
-				files: {
-					'./build/style/output.css': ['./style/style.css', './style/another.css']
+				files: {																		// Dictionary of files
+					'./build/style/output.css': [							// destination: [source, ...]
+						'./style/style.css', 
+						'./style/another.css'
+					]
 				}
 			}
 		}
   });
 
-	// Load the plugin that provides the "uglify" task.
+	// Load the plugins that provide the tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 
-  // Default task(s).
+  // Register default task(s).
 	grunt.registerTask('default', ['uglify', 'htmlmin', 'cssmin']);
 };
