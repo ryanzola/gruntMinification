@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 };
 ```
 
-Run all three tasks with the `grunt` command or run them individually with `grunt ...`
+Run all three tasks with the `grunt` command or run them individually with `grunt <task-name>`
 
 ### Project Dependencies
 #### [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin)
