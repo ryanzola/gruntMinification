@@ -15,22 +15,27 @@ A typical setup will involve adding two files to your project: `package.json` an
 #### package.json
 The `package.json` file belongs in the root directory of your project, next to the `Gruntfile`, and should be committed with your project source. Running npm install in the same folder as a `package.json` file will install the correct version of each dependency listed therein.
 
-There are a few ways to create a `package.json` file for your project:
-
 Most **grunt-init** templates will automatically create a project-specific package.json file.
 The npm init command will create a basic package.json file.
 Start with the example below, and expand as needed, following this specification.
+
+These are the dependencies you will need
 ``` javascript
 {
   "name": "my-project-name",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-uglify": "^3.3.0"
+    "grunt": "^1.x.x",
+    "grunt-contrib-cssmin": "^2.x.x",
+    "grunt-contrib-htmlmin": "^2.x.x",
+    "grunt-contrib-uglify": "^3.x.x"
   }
 }
+```
+
+Gather them all by running the following command
+```
+npm install --save-dev grunt grunt-contrib-cssmin grunt-contrib-htmlmin grunt-contrib-uglify
 ```
 
 ### Gruntfile.js
