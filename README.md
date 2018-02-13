@@ -186,3 +186,4 @@ grunt.initConfig({
 ```
 
 # V minified. V speed.
+![FRIEND](http://www.aaanimalcontrol.com/Professional-Trapper/gallery/opossum021.jpg)
