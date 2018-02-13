@@ -7,15 +7,15 @@ npm i -g grunt-cli
 
 This will put the grunt command in your system path, allowing it to be run from any directory.
 
-**Note** that installing grunt-cli does not install the Grunt task runner! The job of the Grunt CLI is simple: run the version of Grunt which has been installed next to a *Gruntfile*. This allows multiple versions of Grunt to be installed on the same machine simultaneously.
+**Note** that installing grunt-cli does not install the Grunt task runner! The job of the Grunt CLI is simple: run the version of Grunt which has been installed next to a `Gruntfile`. This allows multiple versions of Grunt to be installed on the same machine simultaneously.
 
 ### Prepare a New Grunt Project
-A typical setup will involve adding two files to your project: *package.json* and the *Gruntfile*.
+A typical setup will involve adding two files to your project: `package.json` and the `Gruntfile.js`.
 
 #### package.json
-The *package.json* file belongs in the root directory of your project, next to the *Gruntfile*, and should be committed with your project source. Running npm install in the same folder as a *package.json* file will install the correct version of each dependency listed therein.
+The `package.json` file belongs in the root directory of your project, next to the `Gruntfile`, and should be committed with your project source. Running npm install in the same folder as a `package.json` file will install the correct version of each dependency listed therein.
 
-There are a few ways to create a *package.json* file for your project:
+There are a few ways to create a `package.json` file for your project:
 
 Most **grunt-init** templates will automatically create a project-specific package.json file.
 The npm init command will create a basic package.json file.
@@ -34,9 +34,9 @@ Start with the example below, and expand as needed, following this specification
 ```
 
 ### Gruntfile.js
-The *Gruntfile.js* file is a valid JavaScript file that belongs in the root directory of your project, next to the *package.json* file, and should be committed with your project source.
+The `Gruntfile.js` file is a valid JavaScript file that belongs in the root directory of your project, next to the `package.json` file, and should be committed with your project source.
 
-A *Gruntfile* is comprised of the following parts:
+A `Gruntfile` is comprised of the following parts:
 
 * The "wrapper" function
 * Project and task configuration
