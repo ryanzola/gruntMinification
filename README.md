@@ -160,6 +160,7 @@ grunt.initConfig({
 ```
 
 **No mangling**
+
 Specify `mangle: false` to prevent changes to your variable and function names.
 ``` javascript
 grunt.initConfig({
