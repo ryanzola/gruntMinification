@@ -79,6 +79,7 @@ module.exports = function(grunt) {
 Run all three tasks with the `grunt` command or run them individually with `grunt <task-name>`
 
 ### Project Dependencies
+#### Minify HTML
 #### [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin)
 
 Run this task with the `grunt htmlmin` command.
@@ -111,6 +112,7 @@ grunt.registerTask('default', ['htmlmin']);
 
 **[HTML Minifier Options Quick Reference](https://github.com/kangax/html-minifier#options-quick-reference)**
 
+#### Minify CSS
 #### [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin)
 
 Run this task with the `grunt cssmin` command.
@@ -146,6 +148,7 @@ cssmin: {
 }
 ```
 
+#### Minify JS
 #### [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
 
 Run this task with the `grunt uglify` command.
