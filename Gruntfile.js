@@ -39,14 +39,13 @@ module.exports = function(grunt) {
         roundingPrecision: -1
       },
       target: {
-        files: {
-          // Dictionary of files
-          './build/style/output.css': [
-            // destination: [source, ...]
-            './style/style.css',
-            './style/another.css'
-          ]
-        }
+        files: [{
+          expand: true,
+          cwd: './style',
+          src: ['*.css', '!*.min.css'],
+          dest: 'build/style',
+          ext: '.min.css'
+        }]
       }
     }
   });
