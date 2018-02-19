@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         files: {
           './build/scripts/output.min.js': [
             // Dictionary of files
-            './scripts/server.js', // destination: [source, ...]
+            './server.js', // destination: [source, ...]
             './scripts/index.js'
           ]
         }
