@@ -14,11 +14,8 @@ mongoose.connect(
     process.env.MONGO_ATLAS_USER +
     ':' +
     process.env.MONGO_ATLAS_PW +
-    '@cluster0-shard-00-00-ta2bv.mongodb.net:27017,cluster0-shard-00-01-ta2bv.mongodb.net:27017,cluster0-shard-00-02-ta2bv.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',
-  () => {
-    console.log('database connected');
-  }
-);
+		'@cluster0-shard-00-00-ta2bv.mongodb.net:27017,cluster0-shard-00-01-ta2bv.mongodb.net:27017,cluster0-shard-00-02-ta2bv.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin'
+	);
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -66,9 +63,6 @@ app.get('/message', function(req, res) {
 
 app.post('/event', function(req, res) {
   console.log('body', req.body.hello);
-  res.status(201).json({
-    message: 'hej, event happened'
-  });
 });
 
 module.exports = app;
