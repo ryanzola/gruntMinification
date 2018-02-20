@@ -8,7 +8,7 @@
     "url": "git+https://github.com/ryanzola/gruntMinification.git"
   },
   "scripts": {
-    "test": "lol",
+    "test": "node test/routes.js",
     "start": "node ."
   },
   "keywords": [],
@@ -17,16 +17,20 @@
   "dependencies": {
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0",
-    "multer": "^1.3.0"
+    "multer": "^1.3.0",
+    "pm2": "^2.10.1"
   },
   "devDependencies": {
     "express": "^4.16.2",
     "grunt": "^1.0.2",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-uglify": "^3.3.0"
+    "grunt-contrib-uglify": "^3.3.0",
+    "supertest": "^3.0.0",
+    "tape": "^4.9.0"
   }
 }

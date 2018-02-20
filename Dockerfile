@@ -8,6 +8,10 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 RUN npm install
 
+#Bundle api
+RUN mkdir -p /usr/src/api
+COPY api /usr/src/api
+
 #Bundle app source
 COPY src /usr/src/app
 

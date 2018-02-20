@@ -1,34 +1,41 @@
-# Deployment Steps
+# Docker Build Steps
+# After constructing a Dockerfile, build the image
+    docker build .
 
+# After the 'built successfully' prompt, copy the container ID and run that container
+    docker run -t <CONTAINER ID>
+
+
+# Kubernetes Deployment Steps
 # Create cluster
-gcloud container clusters create <PROJECT ID> --machine-type g1-small
+    gcloud container clusters create <PROJECT ID> --machine-type g1-small
 
 # Build Docker image and tag it with the gcr path and version
-docker build --tag=gcr.io/<PROJECT ID>/<PROJECT NAME>:1 . 
+    docker build --tag=gcr.io/<PROJECT ID>/<PROJECT NAME>:1 . 
 
 # Push the image to Google Container Registry
-gcloud docker -- push gcr.io/<PROJECT ID>/<PROJECT NAME>:1
+    gcloud docker -- push gcr.io/<PROJECT ID>/<PROJECT NAME>:1
 
 # Create Kubernetes Replication Controller
-kubectl create -f kubernetes.yaml
+    kubectl create -f kubernetes.yaml
 
 # Verify the RC is available, get the ID
-kubectl get rc
+    kubectl get rc
 
 # Verify the pods were created and available
-kubectl get po
+    kubectl get po
 
 # Print logs to confirm the server has started
-kubectl logs glassycourage-<RANDOMLY GENERATED NUMBER>  
+    kubectl logs glassycourage-<RANDOMLY GENERATED NUMBER>  
 
 # Expose the RC to the internet
-kubectl expose rc glassycourage --type="LoadBalancer"
+    kubectl expose rc glassycourage --type="LoadBalancer"
 
 # Confirm services are running
-kubectl get services glassycourage
+    kubectl get services glassycourage
 
 # Hit those routes!
-curl -H "Content-Type: application/json" -X POST -d '{"hello":"starbuck3s"}' http://<EXTERNAL IP>:5000/event
+    curl -H "Content-Type: application/json" -X POST -d '{"hello":"starbuck3s"}' http://<EXTERNAL IP>:5000/event
 
 
 
