@@ -1,10 +1,6 @@
 'use strict';
 
-var http = require('http');
-var app = require('./app');
-var port = process.env.PORT || 5000;
-var server = http.createServer(app);
-
-server.listen(port, function() {
-  console.log('server is listening on port', port)
-});
+(function() {
+  document.getElementById('message').innerHTML = 'This message and color was set by minified JS'
+  document.getElementById('message').style.color = '#FF0000';
+})();
