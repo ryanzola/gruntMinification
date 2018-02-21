@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "hahahahaha",
-    "start": "node ./build/scripts/index.min.js"
+    "start": "node ./server.js"
   },
   "keywords": [],
   "author": "",
