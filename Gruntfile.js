@@ -10,10 +10,9 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          './build/scripts/output.min.js': [
+          './build/scripts/index.min.js': [
             // Dictionary of files
-            './server.js', // destination: [source, ...]
-            './scripts/index.js'
+            './scripts/index.js' // destination: [source, ...]
           ]
         }
       }
@@ -41,9 +40,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: './style',
+          cwd: './styles',
           src: ['*.css', '!*.min.css'],
-          dest: 'build/style',
+          dest: 'build/styles',
           ext: '.min.css'
         }]
       }
